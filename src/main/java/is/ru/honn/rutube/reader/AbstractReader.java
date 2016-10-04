@@ -2,25 +2,41 @@ package is.ru.honn.rutube.reader;
 
 import org.json.simple.JSONObject;
 
+import java.util.List;
+import java.util.StringJoiner;
+
 /**
  * Created by VilhjalmurAlex on 26/09/2016.
- * @Author Vilhjálmur Alex Hannesson
+ * @Author Vilhjálmur Alex Hannesson and Höskuldur Ágústsson
  * @Date 26/09/2016
  */
 public abstract class AbstractReader<T> implements Reader{
+    String uri;
+    ClientRequest clientRequest = new ClientRequest();
+    ReadHandler myReadHandler;
+    /*public abstract Object parse(){
+
+    }*/
+
     @Override
     public Object read() {
-        return null;
+        if(uri == null){
+            //throw new ReaderException("URI Not Found");
+        }
+        if(myReadHandler == null){
+            //throw new ReaderException("ReadHandler Not Found");
+        }
+        return this.parse(clientRequest.getRequest(uri));
     }
 
     @Override
     public void setURI(String URI) {
-
+        this.uri = URI;
     }
 
     @Override
     public void setReadHandler(ReadHandler readHandler) {
-
+        this.myReadHandler = readHandler;
     }
 
     /**

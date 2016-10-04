@@ -4,6 +4,7 @@ import is.ru.honn.rutube.domain.User;
 import is.ru.honn.rutube.domain.Video;
 import is.ru.honn.rutube.reader.Reader;
 import is.ru.honn.rutube.reader.ReaderException;
+import is.ru.honn.rutube.service.ServiceException;
 import is.ru.honn.rutube.service.UserServiceStub;
 import is.ru.honn.rutube.service.VideoServiceStub;
 import org.junit.Test;
@@ -12,25 +13,25 @@ import javax.management.ServiceNotFoundException;
 
 /**
  * Created by VilhjalmurAlex on 26/09/2016.
- * @Author Vilhjálmur Alex Hannesson
+ * @Author Vilhjálmur Alex Hannesson and Höskuldur Ágústsson
  * @Date 26/09/2016
  */
 public class Tests {
     public class TestUserService{
         @Test
-        public void AddingUserShouldBeSuccessfull(){
+        public void AddingUserShouldBeSuccessful() throws Exception{
             UserServiceStub uss = new UserServiceStub();
             User u = new User(0, "Vilhjalmur", "hannesson", "vilhjalmur@gmail.com", "Villson", "13.Nóv");
             try{
                 //User should be added
-                assertEquals(uss.addUser(u),0);
+                assertEquals(uss.addUser(u), 0);
             }
-            catch (ServiceNotFoundException x){
+            catch (ServiceException x){
                 System.out.println("Service not found");
             }
         }
         @Test
-        public void AddingUserShouldFail(){
+        public void AddingUserShouldFail() throws Exception{
             UserServiceStub uss = new UserServiceStub();
             User u = new User(0, "Vilhjalmur", "hannesson", "vilhjalmur@gmail.com", "Villson", "13.Nóv");
             User u2 = new User(0, "Vilhjalmur", "hannesson", "vilhjalmur@gmail.com", "Villson", "13.Nóv");
@@ -40,19 +41,19 @@ public class Tests {
                 //User should already exist
                 assertEquals(uss.addUser(u2),-1);
             }
-            catch (ServiceNotFoundException x){
+            catch (ServiceException x){
                 System.out.println("Service not found");
             }
         }
         @Test
-        public void ShouldReturnAExsistingUser(){
+        public void ShouldReturnAnExistingUser(){
             UserServiceStub uss = new UserServiceStub();
             User u = new User(0, "Vilhjalmur", "hannesson", "vilhjalmur@gmail.com", "Villson", "13.Nóv");
             try{
-                //User should be added
-                assertEquals(uss.addUser(u),1);
+                //User should be found
+                assertEquals(uss.getUserById(u.getUserId()).getUserId(), 0);
             }
-            catch (ServiceNotFoundException x){
+            catch (ServiceException x){
                 System.out.println("Service not found");
             }
 
@@ -64,10 +65,10 @@ public class Tests {
             UserServiceStub uss = new UserServiceStub();
             User u = new User(0, "Vilhjalmur", "hannesson", "vilhjalmur@gmail.com", "Villson", "13.Nóv");
             try{
-                //User should be added
-                assertEquals(uss.addUser(u),1);
+                //User should be found
+                assertEquals(uss.getUserById(u.getUserId()).getUserId(), 1);
             }
-            catch (ServiceNotFoundException x){
+            catch (ServiceException x){
                 System.out.println("Service not found");
             }
 
@@ -77,7 +78,7 @@ public class Tests {
     }
     public class TestVideoService{
         @Test
-        public void AddingVideoShouldBeSuccessfull(){
+        public void AddingVideoShouldBeSuccessful() throws Exception{
             UserServiceStub uss = new UserServiceStub();
             User u = new User(0, "Vilhjalmur", "hannesson", "vilhjalmur@gmail.com", "Villson", "13.Nóv");
             VideoServiceStub vss = new VideoServiceStub();
@@ -86,12 +87,12 @@ public class Tests {
                 //Video should be added
                 assertEquals(vss.addVideo(uss.getUsers(),v,u.getUserId()),0);
             }
-            catch (ServiceNotFoundException x){
+            catch (ServiceException x){
                 System.out.println("Service not found");
             }
         }
         @Test
-        public void AddingVideoShouldFail(){
+        public void AddingVideoShouldFail() throws Exception{
             UserServiceStub uss = new UserServiceStub();
             User u = new User(0, "Vilhjalmur", "hannesson", "vilhjalmur@gmail.com", "Villson", "13.Nóv");
             VideoServiceStub vss = new VideoServiceStub();
@@ -100,7 +101,7 @@ public class Tests {
                 //Video should be added
                 assertEquals(vss.addVideo(uss.getUsers(),v,1),-1);
             }
-            catch (ServiceNotFoundException x){
+            catch (ServiceException x){
                 System.out.println("Service not found");
             }
         }
@@ -114,7 +115,7 @@ public class Tests {
                 //Video should be added
                 assertEquals(vss.addVideo(uss.getUsers(),v,u.getUserId()),0);
             }
-            catch (ServiceNotFoundException x){
+            catch (ServiceException x){
                 System.out.println("Service not found");
             }
             //Video should not be returned
@@ -128,7 +129,7 @@ public class Tests {
 
         }
         @Test
-        public void ShouldThrowExcaptionIfURLIncorrect() throws ReaderException{
+        public void ShouldThrowExceptionIfURLIncorrect() throws ReaderException{
 
         }
         @Test

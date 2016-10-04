@@ -2,19 +2,20 @@ package is.ru.honn.rutube.service;
 
 import is.ru.honn.rutube.domain.User;
 
-import javax.management.ServiceNotFoundException;
+
 import java.util.*;
 
 /**
  * Created by VilhjalmurAlex on 26/09/2016.
- * @Author Vilhjálmur Alex Hannesson
+ * @Author Vilhjálmur Alex Hannesson and Höskuldur Ágústsson
  * @Date 26/09/2016
  */
 public class UserServiceStub implements UserService{
     List<User> users = new ArrayList<>();
 
+    //Pæling að beila á int id = user.getUserId();
     @Override
-    public int addUser(User user) throws ServiceNotFoundException {
+    public int addUser(User user) throws ServiceException {
         int id = user.getUserId();
         boolean notInList = true;
 
@@ -27,7 +28,7 @@ public class UserServiceStub implements UserService{
             users.add(user);
             return id;
         }
-        return -1;
+        throw new ServiceException();
     }
 
     @Override
@@ -35,10 +36,11 @@ public class UserServiceStub implements UserService{
         return users;
     }
 
+
     @Override
-    public User getUserById(int userid) {
+    public User getUserById(int userId) {
         for(int i = 0; i < users.size();i++){
-            if(users.get(i).getUserId() == userid){
+            if(users.get(i).getUserId() == userId){
                 return users.get(i);
             }
         }

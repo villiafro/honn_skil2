@@ -3,13 +3,12 @@ package is.ru.honn.rutube.service;
 import is.ru.honn.rutube.domain.User;
 import is.ru.honn.rutube.domain.Video;
 
-import javax.management.ServiceNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by VilhjalmurAlex on 26/09/2016.
- * @Author Vilhjálmur Alex Hannesson
+ * @Author Vilhjálmur Alex Hannesson and Höskuldur Ágústsson
  * @Date 26/09/2016
  */
 public class VideoServiceStub implements VideoService{
@@ -26,7 +25,7 @@ public class VideoServiceStub implements VideoService{
     }
 
     @Override
-    public List<Video> getVideosbyUser(List<User> users, int userId) {
+    public List<Video> getVideosByUser(List<User> users, int userId) {
         for(int i = 0; i < users.size(); i++){
             if(users.get(i).getUserId() == userId){
                 return users.get(i).getVideos();
@@ -36,7 +35,7 @@ public class VideoServiceStub implements VideoService{
     }
 
     @Override
-    public int addVideo(List<User> users, Video video, int userId) throws ServiceNotFoundException {
+    public int addVideo(List<User> users, Video video, int userId) throws ServiceException {
         int id = video.getVideoId();
         for(int i = 0; i < users.size(); i++){
             if(users.get(i).getUserId() == userId){
@@ -44,6 +43,6 @@ public class VideoServiceStub implements VideoService{
                 return id;
             }
         }
-        return -1;
+        throw new ServiceException();
     }
 }
