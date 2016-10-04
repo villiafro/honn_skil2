@@ -11,32 +11,45 @@ import java.util.*;
  * @Date 26/09/2016
  */
 public class UserServiceStub implements UserService{
+    /**
+     * A list of RuTube users.
+     */
     List<User> users = new ArrayList<>();
 
-    //Pæling að beila á int id = user.getUserId();
+    /**
+     * Adds a user to the list of users.
+     * @param user The user to be added to the list of users.
+     * @return The ID of the user that was added.
+     * @throws ServiceException if the userId already exists.
+     */
     @Override
     public int addUser(User user) throws ServiceException {
         int id = user.getUserId();
-        boolean notInList = true;
 
         for(int i = 0; i < users.size();i++){
             if(users.get(i).getUserId() == user.getUserId()){
-                notInList = false;
+                throw new ServiceException();
             }
         }
-        if(notInList){
-            users.add(user);
-            return id;
-        }
-        throw new ServiceException();
+        users.add(user);
+        return id;
     }
 
+    /**
+     * Gets a list of all users.
+     * @return The list of all users.
+     */
     @Override
     public List<User> getUsers() {
         return users;
     }
 
 
+    /**
+     * Gets a single user by his ID.
+     * @param userId The ID of the requested user.
+     * @return The requested user or null if he doesn't exist.
+     */
     @Override
     public User getUserById(int userId) {
         for(int i = 0; i < users.size();i++){

@@ -49,13 +49,13 @@ public class Tests {
         public void ShouldReturnAnExistingUser(){
             UserServiceStub uss = new UserServiceStub();
             User u = new User(0, "Vilhjalmur", "hannesson", "vilhjalmur@gmail.com", "Villson", "13.Nóv");
-            try{
+            //try{
                 //User should be found
                 assertEquals(uss.getUserById(u.getUserId()).getUserId(), 0);
-            }
-            catch (ServiceException x){
+            //}
+            /*catch (ServiceException x){
                 System.out.println("Service not found");
-            }
+            }*/
 
             //Return existing user in list
             assertEquals(uss.getUsers().get(0),u);
@@ -64,13 +64,13 @@ public class Tests {
         public void GettingUserThatDoesNotExist(){
             UserServiceStub uss = new UserServiceStub();
             User u = new User(0, "Vilhjalmur", "hannesson", "vilhjalmur@gmail.com", "Villson", "13.Nóv");
-            try{
+            //try{
                 //User should be found
                 assertEquals(uss.getUserById(u.getUserId()).getUserId(), 1);
-            }
-            catch (ServiceException x){
+            //}
+            /*catch (ServiceException x){
                 System.out.println("Service not found");
-            }
+            }*/
 
             //Return null for non existing user
             assertEquals(uss.getUsers().get(1),null);
