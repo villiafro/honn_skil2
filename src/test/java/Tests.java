@@ -76,6 +76,7 @@ public class Tests {
             assertEquals(uss.getUsers().get(1),null);
         }
     }
+
     public class TestVideoService{
         @Test
         public void AddingVideoShouldBeSuccessful() throws Exception{

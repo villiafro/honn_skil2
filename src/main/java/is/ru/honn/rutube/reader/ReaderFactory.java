@@ -1,5 +1,8 @@
 package is.ru.honn.rutube.reader;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
 /**
  * Created by VilhjalmurAlex on 26/09/2016.
  * @Author Vilhjálmur Alex Hannesson and Höskuldur Ágústsson
@@ -16,6 +19,9 @@ public class ReaderFactory {
             return userReader;
         }
         throw new ReaderException("Not a valid reader!");*/
-        return null;
+        ApplicationContext applicationContext = new FileSystemXmlApplicationContext("src/main/test/resources/reader.xml");
+
+        Reader myReader = (Reader) applicationContext.getBean(reader);
+        return myReader;
     }
 }

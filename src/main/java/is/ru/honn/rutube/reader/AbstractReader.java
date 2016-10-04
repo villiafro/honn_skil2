@@ -10,7 +10,7 @@ import java.util.StringJoiner;
  * @Author Vilhjálmur Alex Hannesson and Höskuldur Ágústsson
  * @Date 26/09/2016
  */
-public abstract class AbstractReader<T> implements Reader{
+public abstract class AbstractReader implements Reader{
     String uri;
     ClientRequest clientRequest = new ClientRequest();
     ReadHandler myReadHandler;
@@ -21,10 +21,10 @@ public abstract class AbstractReader<T> implements Reader{
     @Override
     public Object read() {
         if(uri == null){
-            //throw new ReaderException("URI Not Found");
+            throw new ReaderException("URI Not Found");
         }
         if(myReadHandler == null){
-            //throw new ReaderException("ReadHandler Not Found");
+            throw new ReaderException("ReadHandler Not Found");
         }
         return this.parse(clientRequest.getRequest(uri));
     }
