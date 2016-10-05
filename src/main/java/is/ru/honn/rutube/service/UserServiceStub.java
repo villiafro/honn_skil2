@@ -1,8 +1,6 @@
 package is.ru.honn.rutube.service;
 
 import is.ru.honn.rutube.domain.User;
-
-
 import java.util.*;
 
 /**
@@ -11,6 +9,7 @@ import java.util.*;
  * @Date 26/09/2016
  */
 public class UserServiceStub implements UserService{
+
     /**
      * A list of RuTube users.
      */

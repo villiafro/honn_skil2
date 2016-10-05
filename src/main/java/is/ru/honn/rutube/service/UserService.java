@@ -2,11 +2,7 @@ package is.ru.honn.rutube.service;
 
 
 import is.ru.honn.rutube.domain.User;
-
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
-import java.util.ListIterator;
 
 /**
  * Created by VilhjalmurAlex on 26/09/2016.
@@ -14,6 +10,7 @@ import java.util.ListIterator;
  * @Date 26/09/2016
  */
 public interface UserService {
+
     /**
      * Adds a user to the list of users.
      * @param user The user to be added to users.

@@ -2,7 +2,6 @@ package is.ru.honn.rutube.reader;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 /**
  * Created by VilhjalmurAlex on 26/09/2016.
@@ -10,18 +9,16 @@ import org.springframework.context.support.FileSystemXmlApplicationContext;
  * @Date 26/09/2016
  */
 public class ReaderFactory {
-    public Reader getReader(String reader){
-        /*VideoReader videoReader = new VideoReader();
-        UserReader userReader = new UserReader(videoReader);
-        if(reader == "videoReader"){
-            return videoReader;
-        }
-        if(reader == "userReader"){
-            return userReader;
-        }
-        throw new ReaderException("Not a valid reader!");*/
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("reader.xml");
 
+    /**
+     * Creates a new Reader of a given type, either userReader or videoReader,
+     * by comparing the given string to the reader.xml file
+     * @param reader the type of reader to be used
+     * @return a new reader of specified type
+     */
+    public Reader getReader(String reader){
+
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("reader.xml");
         Reader myReader = (Reader) applicationContext.getBean(reader);
         return myReader;
     }

@@ -4,7 +4,6 @@ import is.ru.honn.rutube.domain.Video;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,12 +14,18 @@ import java.util.List;
  */
 public class VideoReader extends AbstractReader{
 
+    /**
+     * Constructor for VideoReader
+     */
     public VideoReader(){}
 
+    /**
+     * Needs a new instance of ReadHandler to run the parser correctly
+     */
     private ReadHandler myReadHandler = new ReadHandler() {
         @Override
         public void read(int count, Object object) {
-
+            //Implemented if needed
         }
     };
 
@@ -30,7 +35,6 @@ public class VideoReader extends AbstractReader{
      * @param content Should be a json Array of videos. see http://mockaroo.com/f13b8200/download?count=1&key=e79a3650
      * @return Object which is a list of videos.
      */
-
     public Object parse(String content){
 
         JSONArray jVideos = (JSONArray) JSONValue.parse(content);

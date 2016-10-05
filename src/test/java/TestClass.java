@@ -12,8 +12,6 @@ import java.util.List;
  */
 public class TestClass extends Tests{
     public static void main(String args[]){
-
-
         VideoReader videoReader = new VideoReader();
         UserReader userReader = new UserReader(videoReader);
         ClientRequest clientRequest = new ClientRequest();

@@ -15,10 +15,17 @@ import java.io.IOException;
  */
 public class ClientRequest
 {
-    public ClientRequest()
-    {
-    }
 
+    /**
+     * Constructor of a new ClientRequest
+     */
+    public ClientRequest() {}
+
+    /**
+     * Creates a new client to read the given url, reads all entities and returns them
+     * @param url the url for the client to read from
+     * @return the given file that was read
+     */
     public String getRequest(String url)
     {
         Client client = ClientBuilder.newClient();
@@ -30,6 +37,12 @@ public class ClientRequest
         return result;
     }
 
+    /**
+     * Creates a new client to read the given file, reads all entities and returns them
+     * @param fileName the file for the client to read from
+     * @return the given file that was read
+     * @throws ReaderException if the file cannot be opened/found
+     */
     public String getFileContent(String fileName) throws ReaderException
     {
         StringBuilder content = new StringBuilder();

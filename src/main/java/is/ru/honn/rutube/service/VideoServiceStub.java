@@ -2,8 +2,6 @@ package is.ru.honn.rutube.service;
 
 import is.ru.honn.rutube.domain.User;
 import is.ru.honn.rutube.domain.Video;
-
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,12 +10,17 @@ import java.util.List;
  * @Date 26/09/2016
  */
 public class VideoServiceStub implements VideoService{
+
     /**
      * An instance of the UserServiceStub to be
      * able to access the list of users.
      */
     UserServiceStub userServiceStub;
 
+    /**
+     * Sets the userServiceStub to a given UserService, to access the list of users
+     * @param uss the given userService
+     */
     public void setUserServiceStub(UserServiceStub uss){
         this.userServiceStub = uss;
     }
@@ -74,14 +77,5 @@ public class VideoServiceStub implements VideoService{
 
         userServiceStub.getUserById(userId).getVideos().add(video);
         return(video.getVideoId());
-
-        /*int id = video.getVideoId();
-        for(int i = 0; i < users.size(); i++){
-            if(users.get(i).getUserId() == userId){
-                videos.add(video);
-                return id;
-            }
-        }
-        throw new ServiceException();*/
     }
 }

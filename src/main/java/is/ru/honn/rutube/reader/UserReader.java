@@ -5,7 +5,6 @@ import is.ru.honn.rutube.domain.Video;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,17 +15,28 @@ import java.util.List;
  */
 public class UserReader extends AbstractReader{
 
+    /**
+     * An instance of the videoReader for a given userReader
+     */
     private VideoReader videoReader;
+
+    /**
+     * Constructor for UserReader with an instance of videoReader
+     * @param videoReader instance of videoReader
+     */
+    public UserReader(VideoReader videoReader){
+        this.videoReader = videoReader;
+    }
+
+    /**
+     * Needs a new instance of ReadHandler to run the parser correctly
+     */
     private ReadHandler myReadHandler = new ReadHandler() {
         @Override
         public void read(int count, Object object) {
 
         }
     };
-
-    public UserReader(VideoReader videoReader){
-        this.videoReader = videoReader;
-    }
 
     /**
      *
