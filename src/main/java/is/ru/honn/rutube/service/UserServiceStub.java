@@ -28,7 +28,7 @@ public class UserServiceStub implements UserService{
 
         for(int i = 0; i < users.size();i++){
             if(users.get(i).getUserId() == user.getUserId()){
-                throw new ServiceException();
+                throw new ServiceException("Adding user failed");
             }
         }
         users.add(user);
