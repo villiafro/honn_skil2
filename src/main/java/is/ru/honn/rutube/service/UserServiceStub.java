@@ -23,8 +23,10 @@ public class UserServiceStub implements UserService{
      */
     @Override
     public int addUser(User user) throws ServiceException {
-        int id = user.getUserId();
+        //notify the observer of a new user
+        notify(user);
 
+        int id = user.getUserId();
         for(int i = 0; i < users.size();i++){
             if(users.get(i).getUserId() == user.getUserId()){
                 throw new ServiceException("Adding user failed");
@@ -57,5 +59,23 @@ public class UserServiceStub implements UserService{
             }
         }
         return null;
+    }
+
+    /**
+     * Notifies the program if a new user is added to the user list
+     * @param user user to be notified of
+     * @return the user added
+     */
+    @Override
+    public User notify(User user) {
+
+        System.out.println("Added a new user:");
+        System.out.println("ID: " + user.getUserId());
+        System.out.println("Name: " + user.getFirstName() + " " + user.getLastName());
+        System.out.println("Nick: " + user.getDisplayName());
+        System.out.println("Email: " + user.getEmail());
+        System.out.println("Birth: " + user.getBirthDate() + "\n");
+
+        return user;
     }
 }

@@ -34,7 +34,7 @@ public class UserReader extends AbstractReader{
     private ReadHandler myReadHandler = new ReadHandler() {
         @Override
         public void read(int count, Object object) {
-
+            //System.out.println("Number of users: " + count);
         }
     };
 

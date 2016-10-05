@@ -48,4 +48,10 @@ public class Video {
     public int getVideoId(){
         return videoId;
     }
+
+    /**
+     * Gets the Title of the video.
+     * @return The title of the video.
+     */
+    public String getTitle(){ return title; }
 }

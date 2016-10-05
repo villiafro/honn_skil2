@@ -25,7 +25,7 @@ public class VideoReader extends AbstractReader{
     private ReadHandler myReadHandler = new ReadHandler() {
         @Override
         public void read(int count, Object object) {
-            //Implemented if needed
+            //System.out.println("Number of videos: " + count);
         }
     };
 

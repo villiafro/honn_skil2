@@ -1,5 +1,4 @@
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
 
 import is.ru.honn.rutube.domain.User;
 import is.ru.honn.rutube.domain.Video;
@@ -7,11 +6,7 @@ import is.ru.honn.rutube.reader.*;
 import is.ru.honn.rutube.service.ServiceException;
 import is.ru.honn.rutube.service.UserServiceStub;
 import is.ru.honn.rutube.service.VideoServiceStub;
-import org.hamcrest.core.IsEqual;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
-import org.junit.runner.RunWith;
 
 /**
  * Created by VilhjalmurAlex on 26/09/2016.
@@ -35,6 +30,9 @@ public class Tests {
         tr.FactoryShouldReadXMLCorrectly();
         tr.ShouldThrowExceptionIfURLIncorrect();
         tr.ShouldThrowExceptionIfHandlerNotSet();
+
+        TestObserver to = new TestObserver();
+        to.ObserverPatternShouldWorkCorrectly();
     }
 
     public static class TestUserService{
@@ -146,7 +144,6 @@ public class Tests {
             }
 
             VideoServiceStub vss = new VideoServiceStub();
-            Video v = new Video(0, "Mega Song", "Super good song", "Reykjavik", "mp4", null);
             vss.setUserServiceStub(uss);
 
             //Video should not be returned
@@ -203,9 +200,16 @@ public class Tests {
 
         }
     }
-    public class TestObserver{
+    public static class TestObserver{
         @Test
         public void ObserverPatternShouldWorkCorrectly(){
+            UserServiceStub uss = new UserServiceStub();
+            User u = new User(0, "Vilhjalmur", "hannesson", "vilhjalmur@gmail.com", "Villson", "2005-11-12");
+
+            assertEquals(uss.notify(u).getUserId(), u.getUserId());
+            assertEquals(uss.notify(u).getDisplayName(), u.getDisplayName());
+            assertEquals(uss.notify(u).getBirthDate(), u.getBirthDate());
+            assertEquals(uss.notify(u).getEmail(), u.getEmail());
 
         }
     }

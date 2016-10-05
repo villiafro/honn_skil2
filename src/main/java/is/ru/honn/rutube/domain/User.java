@@ -60,4 +60,34 @@ public class User {
     public List<Video> getVideos(){
         return videos;
     }
+
+    /**
+     * Returns the display name of user
+     * @return displayName
+     */
+    public String getDisplayName() { return displayName; }
+
+    /**
+     * Returns the first name of user
+     * @return firstName
+     */
+    public String getFirstName() { return firstName; }
+
+    /**
+     * Returns the last name of user
+     * @return lastName
+     */
+    public String getLastName() { return lastName; }
+
+    /**
+     * Returns the email of user
+     * @return email
+     */
+    public String getEmail() { return email; }
+
+    /**
+     * Returns date of birth of user
+     * @return birthDate
+     */
+    public LocalDate getBirthDate() { return birthDate; }
 }

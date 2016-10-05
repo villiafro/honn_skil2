@@ -2,6 +2,8 @@ package is.ru.honn.rutube.service;
 
 
 import is.ru.honn.rutube.domain.User;
+import is.ru.honn.rutube.observer.Observer;
+
 import java.util.List;
 
 /**
@@ -9,7 +11,7 @@ import java.util.List;
  * @Author Vilhjálmur Alex Hannesson and Höskuldur Ágústsson
  * @Date 26/09/2016
  */
-public interface UserService {
+public interface UserService extends Observer{
 
     /**
      * Adds a user to the list of users.
