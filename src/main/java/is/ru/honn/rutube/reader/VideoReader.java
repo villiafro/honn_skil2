@@ -17,6 +17,13 @@ public class VideoReader extends AbstractReader{
 
     public VideoReader(){}
 
+    private ReadHandler myReadHandler = new ReadHandler() {
+        @Override
+        public void read(int count, Object object) {
+
+        }
+    };
+
     /**
      * Walks through a json array of videos and maps it to a object which is a list of videos.
      *
@@ -47,19 +54,4 @@ public class VideoReader extends AbstractReader{
         return videos;
     }
 
-    /**
-     *
-     * @param jParent Json parent containing an integer field.
-     * @param name name of the integer field
-     * @return int value of the json int in the jParent object.
-     */
-    protected static int getInt(JSONObject jParent, String name)
-    {
-        if(jParent == null)
-            return 0;
-        Long value = (Long)jParent.get(name);
-        if(value == null)
-            return 0;
-        return value.intValue();
-    }
 }

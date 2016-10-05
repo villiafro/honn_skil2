@@ -18,6 +18,10 @@ public class VideoServiceStub implements VideoService{
      */
     UserServiceStub userServiceStub;
 
+    public void setUserServiceStub(UserServiceStub uss){
+        this.userServiceStub = uss;
+    }
+
     /**
      * Gets a single video by its ID.
      * @param videoId The ID of the requested video.
@@ -61,8 +65,11 @@ public class VideoServiceStub implements VideoService{
      */
     @Override
     public int addVideo(List<User> users, Video video, int userId) throws ServiceException {
-        if (getVideosByUser(users, userId) == null || getVideo(video.getVideoId()) != null) {
-            throw new ServiceException();
+        if (getVideosByUser(users, userId) == null) {
+            throw new ServiceException("Cannot find user");
+        }
+        else if(getVideo(video.getVideoId()) != null) {
+            throw new ServiceException("Cannot add video");
         }
 
         userServiceStub.getUserById(userId).getVideos().add(video);

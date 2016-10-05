@@ -6,7 +6,7 @@ package is.ru.honn.rutube.reader;
  * @Date 26/09/2016
  */
 public interface Reader{
-    public Object read();
+    public Object read() throws ReaderException;
     public Object parse(String content);
     public void setURI(String URI);
     public void setReadHandler(ReadHandler readHandler);

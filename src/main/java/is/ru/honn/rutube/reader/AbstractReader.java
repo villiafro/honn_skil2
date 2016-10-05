@@ -19,7 +19,7 @@ public abstract class AbstractReader implements Reader{
     }*/
 
     @Override
-    public Object read() {
+    public Object read() throws ReaderException {
         if(uri == null){
             throw new ReaderException("URI Not Found");
         }
