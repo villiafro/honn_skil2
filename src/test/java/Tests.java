@@ -131,7 +131,6 @@ public class Tests {
         }
         @Test
         public void ShouldThrowExceptionIfURLIncorrect() throws ReaderException{
-
         }
         @Test
         public void ShouldThrowExceptionIfHandlerNotSet() throws ReaderException{
