@@ -5,6 +5,8 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/observer/Observer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/is/ru/honn/rutube/domain/User.class" afterPath="$PROJECT_DIR$/target/classes/is/ru/honn/rutube/domain/User.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/is/ru/honn/rutube/domain/Video.class" afterPath="$PROJECT_DIR$/target/classes/is/ru/honn/rutube/domain/Video.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/reader.xml" afterPath="$PROJECT_DIR$/src/test/resources/reader.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/reader.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/is/ru/honn/rutube/reader/AbstractReader.class" afterPath="$PROJECT_DIR$/target/classes/is/ru/honn/rutube/reader/AbstractReader.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/is/ru/honn/rutube/reader/ClientRequest.class" afterPath="$PROJECT_DIR$/target/classes/is/ru/honn/rutube/reader/ClientRequest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/is/ru/honn/rutube/reader/ReaderException.class" afterPath="$PROJECT_DIR$/target/classes/is/ru/honn/rutube/reader/ReaderException.class" />
@@ -80,27 +82,85 @@
       <file leaf-file-name="Tests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Tests.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="164">
               <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="283">
+              <caret line="55" column="41" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
+              <folding />
+=======
+            <state relative-caret-position="127">
+              <caret line="198" column="13" selection-start-line="198" selection-start-column="13" selection-end-line="198" selection-end-column="13" />
+>>>>>>> 37675cc94de432a4340b00ebf4d2b762f28e6b70
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+>>>>>>> 05295bd56ebf4a6f3de7e867ca1ef0fd33f66035
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="Reader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/reader/Reader.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="194">
               <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+=======
+<<<<<<< HEAD
+      <file leaf-file-name="UserImportProcess.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/process/UserImportProcess.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="60" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
+=======
+      <file leaf-file-name="Video.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/domain/Video.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+>>>>>>> 05295bd56ebf4a6f3de7e867ca1ef0fd33f66035
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="reader.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/reader.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+=======
+      <file leaf-file-name="Reader.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/reader/Reader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+>>>>>>> 05295bd56ebf4a6f3de7e867ca1ef0fd33f66035
+>>>>>>> 37675cc94de432a4340b00ebf4d2b762f28e6b70
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
       <file leaf-file-name="ReaderException.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/reader/ReaderException.java">
+=======
+<<<<<<< HEAD
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/domain/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="692">
+              <caret line="57" column="34" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
+              <folding />
+=======
+      <file leaf-file-name="VideoServiceStub.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/service/VideoServiceStub.java">
+>>>>>>> 37675cc94de432a4340b00ebf4d2b762f28e6b70
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
               <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
@@ -108,15 +168,32 @@
                 <element signature="e#322#323#0" expanded="true" />
                 <element signature="e#352#353#0" expanded="true" />
               </folding>
+>>>>>>> 05295bd56ebf4a6f3de7e867ca1ef0fd33f66035
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="ReadHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/reader/ReadHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
               <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+=======
+<<<<<<< HEAD
+      <file leaf-file-name="ReaderException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/reader/ReaderException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+=======
+      <file leaf-file-name="VideoService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/service/VideoService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+>>>>>>> 05295bd56ebf4a6f3de7e867ca1ef0fd33f66035
+>>>>>>> 37675cc94de432a4340b00ebf4d2b762f28e6b70
               <folding />
             </state>
           </provider>
@@ -207,16 +284,31 @@
         <option value="$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/reader/ReaderException.java" />
         <option value="$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/reader/ClientRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/reader/AbstractReader.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/reader/Reader.java" />
         <option value="$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/domain/Video.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/observer/Observer.java" />
+=======
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/reader/UserReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/reader/VideoReader.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestClass.java" />
+        <option value="$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/service/VideoServiceStub.java" />
+>>>>>>> 05295bd56ebf4a6f3de7e867ca1ef0fd33f66035
+        <option value="$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/reader/ReaderFactory.java" />
+>>>>>>> 37675cc94de432a4340b00ebf4d2b762f28e6b70
         <option value="$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/service/UserServiceStub.java" />
         <option value="$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/domain/User.java" />
         <option value="$PROJECT_DIR$/src/test/java/Tests.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/reader/VideoReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/reader/UserReader.java" />
+=======
+        <option value="$PROJECT_DIR$/src/test/resources/reader.xml" />
+>>>>>>> 37675cc94de432a4340b00ebf4d2b762f28e6b70
       </list>
     </option>
   </component>
@@ -862,12 +954,12 @@
       <workItem from="1475598649031" duration="7000" />
       <workItem from="1475598716747" duration="3019000" />
       <workItem from="1475617776134" duration="3704000" />
-      <workItem from="1475661454736" duration="786000" />
+      <workItem from="1475661454736" duration="2531000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7516000" />
+    <option name="totallyTimeSpent" value="9261000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -894,7 +986,12 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.165625" sideWeight="0.49615806" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+=======
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28998384" sideWeight="0.49615806" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> 05295bd56ebf4a6f3de7e867ca1ef0fd33f66035
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1182,7 +1279,22 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/service/VideoService.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/service/ServiceException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 37675cc94de432a4340b00ebf4d2b762f28e6b70
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
+>>>>>>> 05295bd56ebf4a6f3de7e867ca1ef0fd33f66035
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4232">
           <caret line="1373" column="0" selection-start-line="1373" selection-start-column="0" selection-end-line="1373" selection-end-column="0" />
@@ -1227,7 +1339,14 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/service/ServiceException.java">
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/domain/Video.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/reader/VideoReader.java">
+>>>>>>> 37675cc94de432a4340b00ebf4d2b762f28e6b70
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
@@ -1235,7 +1354,12 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/domain/Video.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/reader/ReadHandler.java">
+>>>>>>> 05295bd56ebf4a6f3de7e867ca1ef0fd33f66035
+>>>>>>> 37675cc94de432a4340b00ebf4d2b762f28e6b70
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
           <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
@@ -1346,8 +1470,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Tests.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="164">
           <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="283">
+          <caret line="55" column="41" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/process/UserImportProcess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="60" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/reader.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+=======
+        <state relative-caret-position="127">
+          <caret line="198" column="13" selection-start-line="198" selection-start-column="13" selection-end-line="198" selection-end-column="13" />
+>>>>>>> 37675cc94de432a4340b00ebf4d2b762f28e6b70
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1356,6 +1505,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/is/ru/honn/rutube/service/UserServiceStub.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1019">
           <caret line="76" column="67" selection-start-line="76" selection-start-column="67" selection-end-line="76" selection-end-column="67" />
           <folding>
@@ -1381,6 +1531,12 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="120">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+>>>>>>> 05295bd56ebf4a6f3de7e867ca1ef0fd33f66035
+          <folding />
+>>>>>>> 37675cc94de432a4340b00ebf4d2b762f28e6b70
         </state>
       </provider>
     </entry>
