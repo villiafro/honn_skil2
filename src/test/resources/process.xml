@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <beans>
+        <bean id="processContext" class="is.ru.honn.rutube.process.UserImportProcess">
+            <property name="processName">
+                <value>UserImportProcess</value>
+            </property>
+            <property name="importURL">
+                <value></value>
+            </property>
+            <property name="processClass">
+                <value>is.ru.honn.rutube.process.UserImportProcess</value>
+            </property>
+        </bean>
+    </beans>
+</beans>
